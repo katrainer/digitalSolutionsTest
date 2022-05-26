@@ -1,0 +1,26 @@
+.postContainer {
+  margin: 10px 10px 10px 0;
+  padding: 14px 35px 17px 35px;
+  width: 418px;
+  border: black 1px solid;
+  cursor: pointer;
+  &:hover{
+    border-width: 3px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 23px;
+    text-transform: capitalize;
+  }
+
+  .text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.41)
+  }
+}

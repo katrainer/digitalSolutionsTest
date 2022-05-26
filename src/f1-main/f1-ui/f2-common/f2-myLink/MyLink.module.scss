@@ -1,0 +1,13 @@
+.mainContainer {
+  background-color: black;
+  display: flex;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    padding: 10px 20px;
+  }
+}

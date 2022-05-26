@@ -1,0 +1,16 @@
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 15px 0 15px 17px;
+  width: 220px;
+  height: 111px;
+  border: 1px solid #DADADA;
+  margin: 20px;
+  .title{
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 23px;
+  }
+}
