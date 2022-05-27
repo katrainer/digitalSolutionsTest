@@ -3,7 +3,7 @@ import {useAppDispatch, useAppSelector} from '../../f1-main/f2-store/store';
 import {PostType, UserType} from '../../f1-main/f3-api/usersApi';
 import s from './UserPage.module.scss'
 import {TableInfo} from './f1-tableInfo/TableInfo';
-import {useEffect} from 'react';
+import {useEffect, useMemo} from 'react';
 import {setUserPostTC} from '../../f1-main/f2-store/f1-reducers/usersReducer';
 import {PostPreview} from '../../f1-main/f1-ui/f2-common/f4-postPreview/PostsPreview';
 import {MyLink} from '../../f1-main/f1-ui/f2-common/f2-myLink/MyLink';
@@ -12,10 +12,10 @@ export const UserPage = () => {
 
     const dispatch = useAppDispatch()
 
-    const param = useParams<'id'>()
+    const {userId} = useParams()
 
     const users = useAppSelector<UserType[]>(state => state.users.users)
-    const user: UserType = users.find(u => u.id === Number(param?.id))!
+    const user: UserType = users.find(u => u.id === Number(userId))!
 
     const allUserPost = useAppSelector<PostType[]>(state => state.users.posts)
     const posts = allUserPost.slice(0, 3)

@@ -11,6 +11,7 @@ import {PostsPage} from '../f2-features/f3-postsPage/PostsPage';
 import {PostPage} from '../f2-features/f4-postPage/PostPage';
 
 export const App = () => {
+    
     const dispatch = useAppDispatch()
 
     useEffect(() => {

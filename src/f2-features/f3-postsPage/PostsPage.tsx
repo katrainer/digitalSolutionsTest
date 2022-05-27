@@ -8,7 +8,7 @@ import s from './PostsPage.module.scss'
 
 export const PostsPage = () => {
 
-    const param = useParams<'id'>()
+    const {userId} = useParams()
 
     const dispatch = useAppDispatch()
 
@@ -16,8 +16,8 @@ export const PostsPage = () => {
 
     useEffect(() => {
 
-        if (param.id) {
-            dispatch(setUserPostTC(Number(param.id)))
+        if (userId) {
+            dispatch(setUserPostTC(Number(userId)))
         }
     }, [])
 

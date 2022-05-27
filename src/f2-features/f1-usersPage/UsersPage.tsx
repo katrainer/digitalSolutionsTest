@@ -4,6 +4,7 @@ import {User} from './f1-user/User';
 import s from './UsersPage.module.scss'
 
 export const UsersPage = () => {
+
     const users = useAppSelector<UserType[]>(state => state.users.users)
 
     return <div className={s.mainContainer}>

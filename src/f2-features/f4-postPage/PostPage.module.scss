@@ -1,0 +1,46 @@
+.mainContainer {
+  padding: 0 53px 20px 53px;
+
+  .postContainer {
+    display: flex;
+    flex-direction: column;
+
+    .postTitle {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 40px;
+    }
+
+    .postBody {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 17px;
+      border: 1px solid black;
+      padding: 14px 35px 17px 35px;
+    }
+  }
+  .commentsContainer{
+    margin-top: 25px;
+    .title{
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 40px;
+    }
+    .commentContainer{
+      padding: 14px 35px 17px 35px;
+      margin: 10px 10px 10px 0;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      .commentTitle{
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 23px;
+      }
+      .commentBody{
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+  }
+}

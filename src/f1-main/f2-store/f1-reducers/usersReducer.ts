@@ -1,4 +1,4 @@
-import {CommentType, PostType, usersApi, UserType} from '../../f3-api/usersApi';
+import {AddCommentDatatype, CommentType, PostType, usersApi, UserType} from '../../f3-api/usersApi';
 import {AppThunk} from '../store';
 import {errorHandler} from '../../f1-ui/f4-utils/errorHandler/errorHandler';
 
@@ -72,6 +72,15 @@ export const setPostCommentsTC = (postId: number): AppThunk => async dispatch =>
     try {
         const res = await usersApi.getCommentsForPost(postId)
         dispatch(setPostCommentsAC(res))
+    } catch (e: any) {
+        errorHandler(e)
+    }
+}
+
+export const addPostCommentsTC = (data: AddCommentDatatype): AppThunk => async dispatch => {
+    try {
+        const res = await usersApi.addComment(data)
+        console.log(res)
     } catch (e: any) {
         errorHandler(e)
     }

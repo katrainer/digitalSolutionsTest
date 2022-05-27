@@ -1,4 +1,4 @@
-import {FC} from 'react';
+import {FC, memo} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {PostType} from '../../../f3-api/usersApi';
 import s from './PostsPreview.module.scss';
@@ -8,6 +8,7 @@ type PostsPreviewPropsType = {
 }
 
 export const PostPreview: FC<PostsPreviewPropsType> = ({post}) => {
+
     const navigate = useNavigate()
     const linkToPostHandler = (postId: number, userId: number) => {
         navigate(`/user/${userId}/post/${postId}`)

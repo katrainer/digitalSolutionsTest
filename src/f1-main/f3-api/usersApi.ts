@@ -10,8 +10,8 @@ export const usersApi = {
     getCommentsForPost(postId: number) {
         return instance.get<CommentType[]>(`posts/${postId}/comments`).then(res => res.data)
     },
-    addComment() {
-        instance.post('/posts/1/comments').then(res => res.data)
+    addComment(data: AddCommentDatatype) {
+       return  instance.post('/posts/1/comments',{...data}).then(res => res.data)
     }
 }
 
@@ -50,6 +50,13 @@ export type PostType = {
 export type CommentType = {
     postId: number
     id: number
+    name: string
+    email: string
+    body: string
+}
+
+export type AddCommentDatatype= {
+    postId: number
     name: string
     email: string
     body: string
