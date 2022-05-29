@@ -80,7 +80,7 @@ export const setPostCommentsTC = (postId: number): AppThunk => async dispatch =>
 export const addPostCommentsTC = (data: AddCommentDatatype): AppThunk => async dispatch => {
     try {
         const res = await usersApi.addComment(data)
-        console.log(res)
+        alert(`Status response: ${res}`)
     } catch (e: any) {
         errorHandler(e)
     }

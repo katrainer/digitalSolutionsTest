@@ -11,7 +11,7 @@ export const usersApi = {
         return instance.get<CommentType[]>(`posts/${postId}/comments`).then(res => res.data)
     },
     addComment(data: AddCommentDatatype) {
-       return  instance.post('/posts/1/comments',{...data}).then(res => res.data)
+       return  instance.post('/posts/1/comments',{...data}).then(res => res.status)
     }
 }
 

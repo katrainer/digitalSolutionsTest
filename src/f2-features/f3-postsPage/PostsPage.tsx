@@ -22,6 +22,9 @@ export const PostsPage = () => {
     }, [])
 
     return <div className={s.mainContainer}>
-        {allUserPost.map(p => <PostPreview post={p} key={p.id}/>)}
+        <span className={s.title}>Посты</span>
+        <div className={s.postsContainer}>
+            {allUserPost.map(p => <PostPreview post={p} key={p.id}/>)}
+        </div>
     </div>
 }

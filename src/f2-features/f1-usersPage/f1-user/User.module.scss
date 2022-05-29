@@ -1,4 +1,4 @@
-.mainContainer{
+.mainContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,7 +8,11 @@
   height: 111px;
   border: 1px solid #DADADA;
   margin: 20px;
-  .title{
+  &:hover{
+    border-color: black;
+  }
+
+  .title {
     font-weight: 700;
     font-size: 17px;
     line-height: 23px;

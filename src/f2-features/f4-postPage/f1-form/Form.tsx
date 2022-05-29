@@ -27,12 +27,12 @@ export const Form: FC<FormPropsType> = memo(({setIsModal, postId}) => {
         validate: (values) => {
             const errors: FormikErrorType = {};
             if (!values.email) {
-                errors.email = 'Required';
+                errors.email = 'Введите e-mail';
             } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
                 errors.email = 'Некорректный e-mail';
             }
-            if (values.name.length < 1) errors.name = 'Слишком короткое имя'
-            if (values.body.length < 1) errors.body = 'Слишком короткий комментарий'
+            if (values.name.length < 1) errors.name = 'Введите имя'
+            if (values.body.length < 1) errors.body = 'Введите комментарий'
             return errors;
         },
         onSubmit: (values) => {
@@ -44,8 +44,7 @@ export const Form: FC<FormPropsType> = memo(({setIsModal, postId}) => {
     return <form onSubmit={formik.handleSubmit} className={s.mainContainer}>
         <div>
             <span>Имя:</span>
-            <input autoFocus
-                   id={'name'}
+            <input id={'name'}
                    type="text"
                    placeholder={'name'}
                    {...formik.getFieldProps('name')}/>
